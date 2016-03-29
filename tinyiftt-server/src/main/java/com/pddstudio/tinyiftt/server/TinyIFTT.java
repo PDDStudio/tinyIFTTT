@@ -6,9 +6,12 @@ import com.pddstudio.tinyiftt.models.TinyActionReceivedListener;
 import com.pddstudio.tinyiftt.server.async.ClientConnectionListener;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -54,6 +57,26 @@ public class TinyIFTT implements TinyActionReceivedListener {
     private void onSocketConnectionFound(Socket socket) {
         //run a new asynchronous listener
         new ClientConnectionListener(socket, this).startListening();
+        //send the list of available commands to the client
+        sendAvailableCommands(socket);
+    }
+
+    private void sendAvailableCommands(Socket socket) {
+        try {
+            //open the output stream
+            OutputStream outputStream = socket.getOutputStream();
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+            BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+            Gson gson = new Gson();
+            //send all available commands
+            for(TinyAction tinyAction : tinyActions) {
+                bufferedWriter.write(gson.toJson(tinyAction));
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+            }
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
     }
 
     @Override
