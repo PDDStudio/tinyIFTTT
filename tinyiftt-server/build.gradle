@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+version = '1.0'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+//create a single Jar with all dependencies
+task tinyIFTTserver(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'tinyIFTT Server',
+                'Implementation-Version': version,
+                'Main-Class': 'com.pddstudio.tinyiftt.server.ServerRunner'
+    }
+    baseName = project.name + '-full'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+//Get dependencies from Maven central repository
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'io.airlift:airline:0.7'
+    compile project(':tinyiftt-model')
+}
