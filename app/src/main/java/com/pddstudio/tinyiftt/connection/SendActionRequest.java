@@ -58,6 +58,7 @@ public class SendActionRequest extends AsyncTask<Void, Void, Void> {
             io.printStackTrace();
             this.cancel(true);
         }
+        Log.d("SendActionRequest", "Action Send!");
         return null;
     }
 
