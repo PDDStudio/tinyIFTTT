@@ -48,7 +48,8 @@ public class TinyIFTT implements TinyActionReceivedListener {
 
     @Override
     public void onTinyActionReceived(TinyAction tinyAction) {
-
+        //handle the action we received from one of the listeners
+        new ActionExecutor(tinyAction).execute();
     }
-    
+
 }

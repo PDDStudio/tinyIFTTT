@@ -6,4 +6,28 @@ package com.pddstudio.tinyiftt.models;
  * have a look at the README.md
  */
 public class TinyAction {
+
+    private int actionIdentifier;
+    private String actionTitle;
+    private String actionDescription;
+    private String[] actionExec;
+
+    public TinyAction() {}
+
+    public int getActionIdentifier() {
+        return actionIdentifier;
+    }
+
+    public String getActionTitle() {
+        return actionTitle;
+    }
+
+    public String getActionDescription() {
+        return actionDescription;
+    }
+
+    public String[] getActionExec() {
+        return actionExec;
+    }
+
 }

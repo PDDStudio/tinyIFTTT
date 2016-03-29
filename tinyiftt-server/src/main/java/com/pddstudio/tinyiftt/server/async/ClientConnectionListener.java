@@ -28,11 +28,13 @@ public class ClientConnectionListener extends Thread {
     }
 
     public void startListening() {
+        //start the new Thread
         start();
     }
 
     @Override
     public void run() {
+        //read the input from the socket's input stream
         try {
             InputStream inputStream = clientSocket.getInputStream();
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
