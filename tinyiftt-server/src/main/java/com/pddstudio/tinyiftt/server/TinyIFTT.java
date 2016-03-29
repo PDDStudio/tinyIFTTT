@@ -47,6 +47,7 @@ public class TinyIFTT implements TinyActionReceivedListener {
     }
 
     private void runTinyServer() throws IOException {
+        //start the server on the given port and listen for incoming connections
         serverSocket = new ServerSocket(serverPort);
         while(true) {
             Socket socket = serverSocket.accept();
