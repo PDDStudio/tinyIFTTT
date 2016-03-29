@@ -1,9 +1,13 @@
 package com.pddstudio.tinyiftt.server;
 
+import com.google.gson.Gson;
 import com.pddstudio.tinyiftt.models.TinyAction;
 import com.pddstudio.tinyiftt.models.TinyActionReceivedListener;
 import com.pddstudio.tinyiftt.server.async.ClientConnectionListener;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -18,8 +22,9 @@ public class TinyIFTT implements TinyActionReceivedListener {
     private final String configFile;
     private int serverPort;
     private ServerSocket serverSocket;
+    private TinyAction[] tinyActions;
 
-    public TinyIFTT(String configFilePath) {
+    public TinyIFTT(String configFilePath) throws IOException {
         this.configFile = configFilePath;
         loadConfiguration();
     }
@@ -29,8 +34,13 @@ public class TinyIFTT implements TinyActionReceivedListener {
         runTinyServer();
     }
 
-    private void loadConfiguration() {
-
+    private void loadConfiguration() throws IOException {
+        //parse all available actions
+        File actionFile = new File(configFile);
+        FileReader fileReader = new FileReader(actionFile);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        Gson gson = new Gson();
+        this.tinyActions = gson.fromJson(bufferedReader, TinyAction[].class);
     }
 
     private void runTinyServer() throws IOException {
