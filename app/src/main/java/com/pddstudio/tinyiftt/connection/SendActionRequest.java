@@ -2,6 +2,7 @@ package com.pddstudio.tinyiftt.connection;
 
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.pddstudio.tinyiftt.models.TinyAction;
@@ -36,6 +37,7 @@ public class SendActionRequest extends AsyncTask<Void, Void, Void> {
     }
 
     public void sendRequest(@Nullable Callback callback) {
+        Log.d("SendActionRequest", "sendRequest() called. Executing job.");
         this.mCallback = callback;
         execute();
     }
