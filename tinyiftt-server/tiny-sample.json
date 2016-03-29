@@ -1,0 +1,6 @@
+{
+    "actionIdentifier" : 1,
+    "actionTitle" : "Home PC Shutdown",
+    "actionDescription" : "Power off my machine upstairs.",
+    "actionExec" : [ "shutdown", "-h", "now" ]   
+}
