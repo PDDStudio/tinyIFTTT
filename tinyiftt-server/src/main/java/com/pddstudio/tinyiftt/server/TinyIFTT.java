@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.pddstudio.tinyiftt.models.TinyAction;
 import com.pddstudio.tinyiftt.models.TinyActionReceivedListener;
 import com.pddstudio.tinyiftt.server.async.ClientConnectionListener;
+import com.pddstudio.tinyiftt.server.utils.Logger;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,10 +31,12 @@ public class TinyIFTT implements TinyActionReceivedListener {
     public TinyIFTT(String configFilePath) throws IOException {
         this.configFile = configFilePath;
         loadConfiguration();
+        Logger.log(this, "tinyIFTT Server configuration loaded.");
     }
 
     public void start(int serverPort) throws IOException {
         this.serverPort = serverPort;
+        Logger.log(this, "Starting tinyIFTT Server...");
         runTinyServer();
     }
 
@@ -56,6 +59,7 @@ public class TinyIFTT implements TinyActionReceivedListener {
     }
 
     private void onSocketConnectionFound(Socket socket) {
+        Logger.log(this, "SocketConnection found: " + socket.getInetAddress().getHostAddress());
         //run a new asynchronous listener
         new ClientConnectionListener(socket, this).startListening();
         //send the list of available commands to the client
@@ -82,6 +86,7 @@ public class TinyIFTT implements TinyActionReceivedListener {
 
     @Override
     public void onTinyActionReceived(TinyAction tinyAction) {
+        Logger.log(this, "ActionReceived: ID [" + tinyAction.getActionIdentifier() + "] Exec: " + tinyAction.getActionExec()[0]);
         //handle the action we received from one of the listeners
         for(TinyAction mAction : tinyActions) {
             //only execute the action if it's known
