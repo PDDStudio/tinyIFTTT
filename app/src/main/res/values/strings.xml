@@ -6,4 +6,10 @@
     <string name="connect">Connect</string>
     <string name="error_ip_missing">IP-Address can\'t be empty!</string>
     <string name="error_port_missing">Port can\'t be negative or empty!</string>
+    <string name="toast_action_send_success">Action send successfully!</string>
+    <string name="toast_action_send_fail">Send action failed!</string>
+    <string name="dialog_connection_failed_title">Failed to connect!</string>
+    <string name="dialog_connection_failed_content">Unable to connect to tinyIFTTT Server:\n</string>
+    <string name="dialog_connection_closed_title">Server connection closed!</string>
+    <string name="dialog_connection_closed_content">The tinyIFTTT Server was shut down or is no longer reachable.</string>
 </resources>

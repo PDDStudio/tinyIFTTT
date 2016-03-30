@@ -1,5 +1,6 @@
 package com.pddstudio.tinyifttt;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.mikepenz.fastadapter.FastAdapter;
 import com.mikepenz.fastadapter.IAdapter;
@@ -18,6 +20,7 @@ import com.pddstudio.tinyifttt.connection.ConnectionInfo;
 import com.pddstudio.tinyifttt.connection.SendActionRequest;
 import com.pddstudio.tinyifttt.connection.ServerConnection;
 import com.pddstudio.tinyifttt.models.TinyAction;
+import com.pddstudio.tinyifttt.utils.Dialog;
 
 public class MainActivity extends AppCompatActivity implements ServerConnection.ConnectionCallback, FastAdapter.OnClickListener, SendActionRequest.Callback {
 
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements ServerConnection.
     @Override
     public void onActionSend(boolean success) {
         Log.d("MainActivity", "Action Send : " + success);
+        if(success) showToast(getString(R.string.toast_action_send_success));
+        else showToast(getString(R.string.toast_action_send_fail));
     }
 
     @Override
@@ -71,17 +76,37 @@ public class MainActivity extends AppCompatActivity implements ServerConnection.
     public void onConnectingFailed(@Nullable Throwable throwable) {
         Log.d("MainActivity", "onConnectionFailed()");
         if(throwable != null) throwable.printStackTrace();
+        new Dialog().setContext(this)
+                .setOnClickListener(new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.this.finish();
+                    }
+                })
+                .show(getSupportFragmentManager(), R.string.dialog_connection_failed_title, R.string.dialog_connection_failed_content);
     }
 
     @Override
     public void onConnectingFinished() {
         Log.d("MainActivity", "onConnectionFinished() called");
+        new Dialog().setContext(this)
+                .setOnClickListener(new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.this.finish();
+                    }
+                })
+                .show(getSupportFragmentManager(), R.string.dialog_connection_closed_title, R.string.dialog_connection_closed_content);
     }
 
     @Override
     public void onTinyActionFound(TinyAction tinyAction) {
         Log.d("MainActivity", "TinyAction received: " + tinyAction.getActionIdentifier() + " Title: " + tinyAction.getActionTitle() + " Description: " + tinyAction.getActionDescription());
         fastAdapter.add(new TinyActionItem(tinyAction));
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
 }

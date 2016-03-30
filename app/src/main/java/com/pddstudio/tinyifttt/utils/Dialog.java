@@ -21,10 +21,16 @@ public class Dialog extends DialogFragment {
     private Context mContext;
     @StringRes private int mDialogTitle;
     @StringRes private int mDialogContent;
+    private DialogInterface.OnClickListener mOnClickListener;
 
 
     public Dialog setContext(Context context) {
         this.mContext = context;
+        return this;
+    }
+
+    public Dialog setOnClickListener(DialogInterface.OnClickListener onClickListener) {
+        this.mOnClickListener = onClickListener;
         return this;
     }
 
@@ -39,12 +45,12 @@ public class Dialog extends DialogFragment {
         return new AlertDialog.Builder(mContext)
                 .setTitle(mDialogTitle)
                 .setMessage(mDialogContent)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                .setPositiveButton(android.R.string.ok, mOnClickListener == null ? new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Log.d(LOG_TAG, "onClick() for positive dialog action called");
                     }
-                })
+                } : mOnClickListener)
                 .create();
     }
 
