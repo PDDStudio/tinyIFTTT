@@ -37,9 +37,9 @@ public class SendActionRequest extends AsyncTask<Void, Void, Void> {
     }
 
     public void sendRequest(@Nullable Callback callback) {
-        Log.d("SendActionRequest", "sendRequest() called. Executing job.");
+        Log.d("SendActionRequest", "sendRequest() called. Executing job. [" + mServerHost + ":" + mServerPort +"]");
         this.mCallback = callback;
-        execute();
+        this.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     @Override
@@ -47,6 +47,7 @@ public class SendActionRequest extends AsyncTask<Void, Void, Void> {
         //get the output stream and send the action we want to be executed
         try {
             Socket socket = new Socket(mServerHost, mServerPort);
+            if(!socket.isConnected()) this.cancel(true);
             OutputStream outputStream = socket.getOutputStream();
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
             BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
