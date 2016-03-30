@@ -1,12 +1,12 @@
-package com.pddstudio.tinyiftt.adapter;
+package com.pddstudio.tinyifttt.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 import com.mikepenz.fastadapter.items.AbstractItem;
-import com.pddstudio.tinyiftt.R;
-import com.pddstudio.tinyiftt.models.TinyAction;
+import com.pddstudio.tinyifttt.R;
+import com.pddstudio.tinyifttt.models.TinyAction;
 
 /**
  * This Class was created by Patrick J

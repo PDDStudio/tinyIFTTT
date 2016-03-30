@@ -5,11 +5,11 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 //create a single Jar with all dependencies
-task tinyIFTTserver(type: Jar) {
+task tinyIFTTTserver(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'tinyIFTT Server',
                 'Implementation-Version': version,
-                'Main-Class': 'com.pddstudio.tinyiftt.server.ServerRunner'
+                'Main-Class': 'com.pddstudio.tinyifttt.server.ServerRunner'
     }
     baseName = project.name + '-full'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }

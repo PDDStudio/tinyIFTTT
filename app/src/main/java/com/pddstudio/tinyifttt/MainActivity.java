@@ -1,4 +1,4 @@
-package com.pddstudio.tinyiftt;
+package com.pddstudio.tinyifttt;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,10 +14,10 @@ import com.mikepenz.fastadapter.FastAdapter;
 import com.mikepenz.fastadapter.IAdapter;
 import com.mikepenz.fastadapter.IItem;
 import com.mikepenz.fastadapter.adapters.FastItemAdapter;
-import com.pddstudio.tinyiftt.adapter.TinyActionItem;
-import com.pddstudio.tinyiftt.connection.SendActionRequest;
-import com.pddstudio.tinyiftt.connection.ServerConnection;
-import com.pddstudio.tinyiftt.models.TinyAction;
+import com.pddstudio.tinyifttt.adapter.TinyActionItem;
+import com.pddstudio.tinyifttt.connection.SendActionRequest;
+import com.pddstudio.tinyifttt.connection.ServerConnection;
+import com.pddstudio.tinyifttt.models.TinyAction;
 
 public class MainActivity extends AppCompatActivity implements ServerConnection.ConnectionCallback,
         View.OnClickListener, FastAdapter.OnClickListener, SendActionRequest.Callback {

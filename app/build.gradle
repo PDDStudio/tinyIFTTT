@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0 rc1"
 
     defaultConfig {
-        applicationId "com.pddstudio.tinyiftt"
+        applicationId "com.pddstudio.tinyifttt"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

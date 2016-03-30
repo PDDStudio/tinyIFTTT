@@ -1,6 +1,6 @@
-package com.pddstudio.tinyiftt.server;
+package com.pddstudio.tinyifttt.server;
 
-import com.pddstudio.tinyiftt.models.TinyAction;
+import com.pddstudio.tinyifttt.models.TinyAction;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package com.pddstudio.tinyiftt.server.utils;
+package com.pddstudio.tinyifttt.server.utils;
 
 /**
  * Project : WetterSuite

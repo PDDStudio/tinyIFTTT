@@ -1,11 +1,11 @@
-package com.pddstudio.tinyiftt.connection;
+package com.pddstudio.tinyifttt.connection;
 
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.pddstudio.tinyiftt.models.TinyAction;
+import com.pddstudio.tinyifttt.models.TinyAction;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

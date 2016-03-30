@@ -1,4 +1,4 @@
-package com.pddstudio.tinyiftt;
+package com.pddstudio.tinyifttt;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

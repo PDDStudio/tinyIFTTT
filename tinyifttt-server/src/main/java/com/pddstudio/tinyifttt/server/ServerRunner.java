@@ -1,4 +1,4 @@
-package com.pddstudio.tinyiftt.server;
+package com.pddstudio.tinyifttt.server;
 
 import java.io.IOException;
 

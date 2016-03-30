@@ -1,4 +1,4 @@
-package com.pddstudio.tinyiftt.models;
+package com.pddstudio.tinyifttt.models;
 
 /**
  * This Class was created by Patrick J

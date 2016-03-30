@@ -1,4 +1,4 @@
-package com.pddstudio.tinyiftt;
+package com.pddstudio.tinyifttt;
 
 import org.junit.Test;
 

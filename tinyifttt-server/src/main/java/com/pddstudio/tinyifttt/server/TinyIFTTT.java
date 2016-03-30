@@ -1,10 +1,10 @@
-package com.pddstudio.tinyiftt.server;
+package com.pddstudio.tinyifttt.server;
 
 import com.google.gson.Gson;
-import com.pddstudio.tinyiftt.models.TinyAction;
-import com.pddstudio.tinyiftt.models.TinyActionReceivedListener;
-import com.pddstudio.tinyiftt.server.async.ClientConnectionListener;
-import com.pddstudio.tinyiftt.server.utils.Logger;
+import com.pddstudio.tinyifttt.models.TinyAction;
+import com.pddstudio.tinyifttt.models.TinyActionReceivedListener;
+import com.pddstudio.tinyifttt.server.async.ClientConnectionListener;
+import com.pddstudio.tinyifttt.server.utils.Logger;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
