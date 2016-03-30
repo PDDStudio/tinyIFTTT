@@ -1,5 +1,6 @@
 #tinyIFTTT
 A tiny, lightweight, easy to use and customize IFTTT (if this, then that) server and (Android) client.
+The ideal thing for hackers and home-automation freaks.
 
 ###What is IFTTT?
 
@@ -10,15 +11,26 @@ IFTTT is a mechanism that allows users to create chains of simple conditional st
 ###What does tinyIFTTT do?
 
 Basically, tinyIFTTT can do **everything** that you could do on your personal computer or server, like for example upgrading your server's linux packages, shutting down or rebooting your server, triggering self-written scripts on your RaspberryPi and much more.
+
 tinyIFTTT aims to let you easily configure different kind of receipes/actions which you can execute remotely from your smartphone using the tinyIFTTT Android-App.
+
 This repository contains the source and pre-packaged binaries for **both** components, the **Android-App** and the **tinyIFTTT Server Module**
 
 ###Why does tinyIFTTT exist?
 
-One day, I was hacking on my RaspberryPi and wrote some scripts to automatically make backups on my NAS. As soon as I was done and got everything set up as I needed it, I got sick of using a SSH Client on my smartphone for typing all the commands I need for my script to be executed. As an Android Developer I thought it would be nice to develop a kind of IFTTT mechanism which allows me to control whatever I want to (as long as I configured it) directly from my smartphone without using any kind of SSH session. All I wanted to do was to press a button and the action should be executed. This was the beginning of tinyIFTTT. 
+One day, I was hacking on my RaspberryPi and wrote some scripts to automatically make backups on my NAS. 
+
+As soon as I was done and got everything set up as I needed it, I got sick of using a SSH Client on my smartphone for typing all the commands I need for my script to be executed. 
+
+As an Android Developer I thought it would be nice to develop a kind of IFTTT mechanism which allows me to control whatever I want to (as long as I configured it) directly from my smartphone without using any kind of SSH session. 
+
+All I wanted to do was to press a button and the action should be executed.
+
+ This was the beginning of tinyIFTTT. 
 
 ###What's in the package
 tinyIFTTT comes with a plug-and-play server component that you can immediately run on your machine.
+
 All you need is a machine with a JVM installed, nothing else is required to get everything up and running (well, except of your receipes of course).
 
 ###Getting Started with tinyIFTTT
@@ -27,7 +39,9 @@ This section gets more into detail how you can get the tinyIFTTT Server Module a
 
 ####Getting the Server Module up and running
 
-There are two ways to get started with the tinyIFTTT Server Module. Either download the [prepackaged binary]() or build it yourself using gradle:
+There are two ways to get started with the tinyIFTTT Server Module. 
+
+Either download the [prepackaged binary]() or build it yourself using gradle:
 
 ```
 ./gradlew tinyIFTTTserver
@@ -51,6 +65,7 @@ java -jar tinyIFTTT-server-full-1.0.jar --help
 
 There are to ways to get the Android App up and running. 
 Either download the [prepackaged apk]() or import the project into AndroidStudio and build it yourself.
+
 Simply install the application and you're ready to go.
 
 ###Configuring tinyIFTTT
@@ -70,10 +85,10 @@ Every receipe is build using the same mechanism:
 
 Explanation:
 
-- actionIdentifier: This identifier is used to validate the action you want to be executed. **Make sure this number is unique and not used twice.**
-- actionTitle: Here you can specify the title you want to be displayed for this receipe on your smartphone.
-- actionDescription: Here you can specify the description you want to be displayed for this receipe on your smartphone.
-- actionExec: An array of String which represents the commands you would execute in your terminal / the process you want to be started with (optional) parameters.
+- **actionIdentifier**: This identifier is used to validate the action you want to be executed. **Make sure this number is unique and not used twice.**
+- **actionTitle**: Here you can specify the title you want to be displayed for this receipe on your smartphone.
+- **actionDescription**: Here you can specify the description you want to be displayed for this receipe on your smartphone.
+- **actionExec**: An array of String which represents the commands you would execute in your terminal / the process you want to be started with (optional) parameters.
 
 ###Usage
 
@@ -89,10 +104,14 @@ Once your tinyIFTTT Server is running you should see something similar to this i
 This means your good to go and can connect to your tinyIFTTT Server via the Android-App.
 
 Enter the IP-Address of the machine you're running the tinyIFTTT Server Module on and the Port you specified when launching the tinyIFTTT Server.
+
 If desired you can save the server connection information in case you don't want to re-enter it all the time.
+
 Simply click the `Connect` Button and you'll see a list of your specified receipes.
+
 Clicking on the specified receipe will execute the desired action.
-More samples and demonstrations can be found in the [Samples & Demonstration]() Section. 
+
+More samples and demonstrations can be found in the [Samples & Demonstration](https://github.com/PDDStudio/tinyIFTTT#samples--demonstration) Section. 
 
 ###Samples & Demonstration
 
