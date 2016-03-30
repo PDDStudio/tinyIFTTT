@@ -71,7 +71,7 @@ Simply install the application and you're ready to go.
 
 ###Configuring tinyIFTTT
 To configure tinyIFTTT all you have to do is writing a simple file which contains your receipes using `json`-format.
-For a life preview check out [the sample json config file here]().
+For a life preview check out [the sample json config file here](https://github.com/PDDStudio/tinyIFTTT/blob/master/tinyifttt-server/tiny-sample.json).
 The config file holds an array of your receipes. This can contain as much receipes as you want to configure.
 Every receipe is build using the same mechanism:
 
