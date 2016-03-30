@@ -28,5 +28,5 @@ dependencies {
     compile('com.mikepenz:fastadapter:1.3.0@aar') {
         transitive = true
     }
-    compile project(':tinyiftt-model')
+    compile project(':tinyifttt-model')
 }

@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tinyIFTT.iml" filepath="$PROJECT_DIR$/tinyIFTT.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tinyiftt-model/tinyiftt-model.iml" filepath="$PROJECT_DIR$/tinyiftt-model/tinyiftt-model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tinyiftt-server/tinyiftt-server.iml" filepath="$PROJECT_DIR$/tinyiftt-server/tinyiftt-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tinyifttt-model/tinyiftt-model.iml" filepath="$PROJECT_DIR$/tinyifttt-model/tinyiftt-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tinyifttt-server/tinyiftt-server.iml" filepath="$PROJECT_DIR$/tinyifttt-server/tinyiftt-server.iml" />
     </modules>
   </component>
 </project>

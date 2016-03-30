@@ -1,1 +1,1 @@
-include ':app', ':tinyiftt-server', ':tinyiftt-model'
+include ':app', ':tinyifttt-server', ':tinyifttt-model'

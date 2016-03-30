@@ -21,14 +21,14 @@ import java.net.Socket;
  * on 29.03.16. For more Details and Licensing
  * have a look at the README.md
  */
-public class TinyIFTT implements TinyActionReceivedListener {
+public class TinyIFTTT implements TinyActionReceivedListener {
 
     private final String configFile;
     private int serverPort;
     private ServerSocket serverSocket;
     private TinyAction[] tinyActions;
 
-    public TinyIFTT(String configFilePath) throws IOException {
+    public TinyIFTTT(String configFilePath) throws IOException {
         this.configFile = configFilePath;
         loadConfiguration();
         Logger.log(this, "tinyIFTT Server configuration loaded.");

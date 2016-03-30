@@ -34,8 +34,8 @@ public class ServerRunner {
 
     public void startService() {
         try {
-            TinyIFTT tinyIFTT = new TinyIFTT(configFileLocation);
-            tinyIFTT.start(configPort);
+            TinyIFTTT tinyIFTTT = new TinyIFTTT(configFileLocation);
+            tinyIFTTT.start(configPort);
         } catch (IOException io) {
             io.printStackTrace();
         }
