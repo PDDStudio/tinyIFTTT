@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         else {
             try {
                 int serverPort = Integer.parseInt(mPortEditText.getText().toString());
+                if(serverPort < 0) throw new NumberFormatException("Can't be lower than 0");
                 String serverIp = mIpAddressEditText.getText().toString();
 
                 if(mSaveLoginsCheckBox.isChecked()) saveConnectionInfo(serverIp, serverPort);
