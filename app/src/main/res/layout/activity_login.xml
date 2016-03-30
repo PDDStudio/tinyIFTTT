@@ -43,6 +43,13 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <CheckBox
+            android:id="@+id/saveLoginCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/save_cred_checkbox"/>
+
         <Button
             android:id="@+id/connectButton"
             android:layout_marginTop="16dp"

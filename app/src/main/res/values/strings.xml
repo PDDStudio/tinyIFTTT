@@ -2,5 +2,6 @@
     <string name="app_name">tinyIFTTT</string>
     <string name="remote_ip">tinyIFTTT Server IP-Address</string>
     <string name="remote_port">tinyIFTTT Server Port</string>
+    <string name="save_cred_checkbox">Remember Server IP-Address and Port</string>
     <string name="connect">Connect</string>
 </resources>

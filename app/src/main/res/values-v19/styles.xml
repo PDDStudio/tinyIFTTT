@@ -9,6 +9,10 @@
                 <item name="windowActionBar">false</item>
                 <item name="windowNoTitle">true</item>
                 <item name="android:windowTranslucentNavigation">true</item>
+        </style>
+
+        <style name="AppTheme.Login" parent="AppTheme">
                 <item name="android:windowTranslucentStatus">true</item>
         </style>
+
 </resources>
