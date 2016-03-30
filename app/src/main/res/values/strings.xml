@@ -4,6 +4,6 @@
     <string name="remote_port">tinyIFTTT Server Port</string>
     <string name="save_cred_checkbox">Remember Server IP-Address and Port</string>
     <string name="connect">Connect</string>
-    <string name="error_ip_missing">IP-Address can't be empty!</string>
-    <string name="error_port_missing">Port can't be negative or empty!</string>
+    <string name="error_ip_missing">IP-Address can\'t be empty!</string>
+    <string name="error_port_missing">Port can\'t be negative or empty!</string>
 </resources>
