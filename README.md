@@ -153,7 +153,7 @@ Assuming we have the following config file filled with the receipes we want to u
 
 This is how it would look like inside the tinyIFTTT Android-App
 
-![](/home/pddstudio/dev/android/github/tinyIFTT/tinyIFTTT-android-app-sample.png) 
+![](https://raw.githubusercontent.com/PDDStudio/tinyIFTTT/master/tinyIFTTT-android-app-sample.png?token=AKb0QK2BJdoWGpn7J9B58upx6b5XnwTEks5XBTzbwA%3D%3D) 
 
 
 In case you want to see a live demonstration, feel free to have a look at the [YouTube Video](https://www.youtube.com/watch?v=HpCYYrplYZ8) I recorded.
