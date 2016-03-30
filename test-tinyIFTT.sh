@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar tinyiftt-server/build/libs/tinyiftt-server-full-1.0.jar -p 1337 -c /home/pddstudio/dev/android/github/tinyIFTTT/tinyiftt-server/tiny-sample.json
+java -jar tinyifttt-server/build/libs/tinyifttt-server-full-1.0.jar -p 1337 -c ./tinyiftt-server/tiny-sample.json
