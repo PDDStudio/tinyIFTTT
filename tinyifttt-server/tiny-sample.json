@@ -4,5 +4,41 @@
     "actionTitle" : "Home PC Shutdown",
     "actionDescription" : "Power off my machine upstairs.",
     "actionExec" : [ "shutdown", "-h", "now" ]   
+    },
+    {
+    "actionIdentifier" : 2,
+    "actionTitle" : "Home PC Reboot",
+    "actionDescription" : "Reboot my machine upstairs.",
+    "actionExec" : [ "reboot" ]   
+    },
+    {
+    "actionIdentifier" : 3,
+    "actionTitle" : "Raspberry Pi Update",
+    "actionDescription" : "Update the packages on my Pi.",
+    "actionExec" : [ "apt-get", "update" ]   
+    },
+    {
+    "actionIdentifier" : 4,
+    "actionTitle" : "Raspberry Pi XBMC",
+    "actionDescription" : "Start XBMC on my Pi.",
+    "actionExec" : [ "xbmc" ]   
+    },
+    {
+    "actionIdentifier" : 5,
+    "actionTitle" : "Run Backup Script",
+    "actionDescription" : "Run the backup script to save my data stored on my NAS.",
+    "actionExec" : [ "sh", "/opt/backup/backup_all.sh" ]   
+    },
+    {
+    "actionIdentifier" : 6,
+    "actionTitle" : "Kitchen Light",
+    "actionDescription" : "Switch on the Light in the kitchen.",
+    "actionExec" : [ "python", "/opt/mods/switch_light.py" ]   
+    },
+    {
+    "actionIdentifier" : 7,
+    "actionTitle" : "Android TV",
+    "actionDescription" : "Power on/off my AndroidTV.",
+    "actionExec" : [ "sh", "/opt/mods/tv_power.sh" ]   
     }
 ]
