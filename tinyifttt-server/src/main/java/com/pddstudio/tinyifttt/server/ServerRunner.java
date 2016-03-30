@@ -14,16 +14,16 @@ import io.airlift.airline.SingleCommand;
  * on 29.03.16. For more Details and Licensing
  * have a look at the README.md
  */
-@Command(name = "tinyIFTT ServerRunner", description = "Run a tinyIFTT-Server")
+@Command(name = "tinyIFTT ServerRunner", description = "Run a tinyIFTTT-Server")
 public class ServerRunner {
 
     @Inject
     public HelpOption helpOption;
 
-    @Option(name = { "-c", "--config" }, description = "The location to the tinyIFTT configuration file.")
+    @Option(name = { "-c", "--config" }, description = "The location to the tinyIFTTT configuration file.")
     public String configFileLocation;
 
-    @Option(name = { "-p", "--port" }, description = "The port the tinyIFTT server should run on.")
+    @Option(name = { "-p", "--port" }, description = "The port the tinyIFTTT server should run on.")
     public int configPort = 1337;
 
     public static void main(String[] args) {
