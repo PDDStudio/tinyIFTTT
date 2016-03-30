@@ -55,6 +55,7 @@ public class SendActionRequest extends AsyncTask<Void, Void, Void> {
             bufferedWriter.write(gson.toJson(mTinyAction));
             bufferedWriter.newLine();
             bufferedWriter.flush();
+            bufferedWriter.close();
         } catch (IOException io) {
             io.printStackTrace();
             this.cancel(true);
