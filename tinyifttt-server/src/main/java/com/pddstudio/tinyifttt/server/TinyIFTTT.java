@@ -31,12 +31,12 @@ public class TinyIFTTT implements TinyActionReceivedListener {
     public TinyIFTTT(String configFilePath) throws IOException {
         this.configFile = configFilePath;
         loadConfiguration();
-        Logger.log(this, "tinyIFTT Server configuration loaded.");
+        Logger.log(this, "tinyIFTTT Server configuration loaded.");
     }
 
     public void start(int serverPort) throws IOException {
         this.serverPort = serverPort;
-        Logger.log(this, "Starting tinyIFTT Server...");
+        Logger.log(this, "Starting tinyIFTTT Server...");
         runTinyServer();
     }
 
