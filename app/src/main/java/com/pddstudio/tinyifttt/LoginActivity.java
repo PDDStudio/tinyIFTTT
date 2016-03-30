@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String hostIp = sharedPreferences.getString(SAVED_HOST_IP, null);
         if(hostIp != null) mIpAddressEditText.setText(hostIp);
         int hostPort = sharedPreferences.getInt(SAVED_HOST_PORT, -1);
-        if(hostPort != -1) mPortEditText.setText(hostPort);
+        if(hostPort != -1) mPortEditText.setText(""+hostPort);
     }
 
     private void saveConnectionInfo(String hostName, int hostPort) {
