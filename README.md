@@ -79,6 +79,20 @@ Explanation:
 
 As soon as you have both modules up and running you can start connecting to your server using the tinyIFTTT Android-App.
 
+Once your tinyIFTTT Server is running you should see something similar to this in your terminal:
+
+```
+[03-30-2016|18:26:57][TinyIFTTT::/D] tinyIFTTT Server configuration loaded.
+[03-30-2016|18:26:57][TinyIFTTT::/D] Starting tinyIFTTT Server...
+```
+
+This means your good to go and can connect to your tinyIFTTT Server via the Android-App.
+
+Enter the IP-Address of the machine you're running the tinyIFTTT Server Module on and the Port you specified when launching the tinyIFTTT Server.
+If desired you can save the server connection information in case you don't want to re-enter it all the time.
+Simply click the `Connect` Button and you'll see a list of your specified receipes.
+Clicking on the specified receipe will execute the desired action.
+More samples and demonstrations can be found in the [Samples & Demonstration]() Section. 
 
 ###Samples & Demonstration
 
@@ -139,4 +153,27 @@ Assuming we have the following config file filled with the receipes we want to u
 
 This is how it would look like inside the tinyIFTTT Android-App
 
-**Picture**
+![](/home/pddstudio/dev/android/github/tinyIFTT/tinyIFTTT-android-app-sample.png) 
+
+
+In case you want to see a live demonstration, feel free to have a look at the [YouTube Video](https://www.youtube.com/watch?v=HpCYYrplYZ8) I recorded.
+
+
+###About & Contact
+- In case you've a question feel free to hit me up via E-Mail (patrick.pddstudio@googlemail.com) 
+- or [Google+](http://plus.google.com/+PatrickJung42)
+
+###License
+    Copyright 2016 Patrick J
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
