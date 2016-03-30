@@ -1,4 +1,4 @@
-#tinyIFTTT
+#tinyIFTTT - If This Then That
 A tiny, lightweight, easy to use and customize IFTTT (if this, then that) server and (Android) client.
 The ideal thing for hackers and home-automation freaks.
 
