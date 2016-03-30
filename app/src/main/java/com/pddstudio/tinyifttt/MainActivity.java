@@ -1,6 +1,8 @@
 package com.pddstudio.tinyifttt;
 
+import android.app.Activity;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements ServerConnection.
 
         //execute the request
         ServerConnection serverConnection = new ServerConnection(ConnectionInfo.getConnectionInfo().getmRemoteHost(), ConnectionInfo.getConnectionInfo().getmRemotePort(), this);
-        serverConnection.execute();
+        serverConnection.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
         recyclerView = (RecyclerView) findViewById(R.id.itemRecyclerView);
         layoutManager = new LinearLayoutManager(this);
@@ -100,15 +102,10 @@ public class MainActivity extends AppCompatActivity implements ServerConnection.
 
     @Override
     public void onConnectingFinished() {
+        //set the result code and finish the activity
         Log.d("MainActivity", "onConnectionFinished() called");
-        new Dialog().setContext(this)
-                .setOnClickListener(new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        MainActivity.this.finish();
-                    }
-                })
-                .show(getSupportFragmentManager(), R.string.dialog_connection_closed_title, R.string.dialog_connection_closed_content);
+        setResult(Activity.RESULT_OK);
+        finish();
     }
 
     @Override

@@ -62,6 +62,9 @@ public class ServerConnection extends AsyncTask<Void, TinyAction, Void> implemen
                 if(tinyAction != null) publishProgress(tinyAction);
             }
 
+            bufferedReader.close();
+            socket.close();
+
         } catch (IOException io) {
             this.mErrorThrowable = io;
             this.cancel(true);

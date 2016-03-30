@@ -56,6 +56,7 @@ public class SendActionRequest extends AsyncTask<Void, Void, Void> {
             bufferedWriter.newLine();
             bufferedWriter.flush();
             bufferedWriter.close();
+            socket.close();
         } catch (IOException io) {
             io.printStackTrace();
             this.cancel(true);

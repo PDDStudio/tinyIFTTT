@@ -2,14 +2,15 @@ package com.pddstudio.tinyifttt;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.pddstudio.tinyifttt.connection.ConnectionInfo;
 
@@ -17,6 +18,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private static final String SAVED_HOST_IP = "remoteHost";
     private static final String SAVED_HOST_PORT = "remotePort";
+    public static final int SESSION_END_CODE = 42;
 
     private TextInputLayout mIpInputLayout;
     private TextInputLayout mPortInputLayout;
@@ -60,9 +62,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if(mSaveLoginsCheckBox.isChecked()) saveConnectionInfo(serverIp, serverPort);
                 ConnectionInfo.setConnectionData(serverIp, serverPort);
                 Intent data = new Intent(this, MainActivity.class);
-                startActivity(data);
+                startActivityForResult(data, SESSION_END_CODE);
             } catch (NumberFormatException nnf) {
                 mPortInputLayout.setError(getString(R.string.error_port_missing));
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == SESSION_END_CODE) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                //FIXME: let the dialog not crash the application due to onSaveInstance
+                //new Dialog().setContext(this)
+                //        .show(getSupportFragmentManager(), R.string.dialog_connection_closed_title, R.string.dialog_connection_closed_content);
+                Toast.makeText(this, R.string.dialog_connection_closed_content, Toast.LENGTH_SHORT).show();
             }
         }
     }
