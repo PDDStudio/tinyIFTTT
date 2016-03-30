@@ -26,4 +26,11 @@ public class ConnectionInfo {
         return mConnectionInfo;
     }
 
+    public String getmRemoteHost() {
+        return mRemoteHost;
+    }
+
+    public int getmRemotePort() {
+        return mRemotePort;
+    }
 }

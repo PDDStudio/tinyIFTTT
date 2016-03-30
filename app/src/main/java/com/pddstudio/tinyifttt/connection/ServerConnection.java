@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.net.Socket;
 
 /**
@@ -17,7 +18,7 @@ import java.net.Socket;
  * on 29.03.16. For more Details and Licensing
  * have a look at the README.md
  */
-public class ServerConnection extends AsyncTask<Void, TinyAction, Void> {
+public class ServerConnection extends AsyncTask<Void, TinyAction, Void> implements Serializable {
 
     public interface ConnectionCallback {
         void onConnectingStarted();
