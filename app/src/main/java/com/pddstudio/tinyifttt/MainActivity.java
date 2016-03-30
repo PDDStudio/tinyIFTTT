@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements ServerConnection.
                         MainActivity.this.finish();
                     }
                 })
-                .show(getSupportFragmentManager(), R.string.dialog_connection_failed_title, R.string.dialog_connection_failed_content);
+                .show(getSupportFragmentManager(), getString(R.string.dialog_connection_failed_title), getString(R.string.dialog_connection_failed_content, throwable != null ? throwable.getMessage() : ""));
     }
 
     @Override

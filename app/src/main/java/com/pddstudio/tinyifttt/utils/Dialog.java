@@ -23,6 +23,8 @@ public class Dialog extends DialogFragment {
     @StringRes private int mDialogContent;
     private DialogInterface.OnClickListener mOnClickListener;
 
+    private String mTitle;
+    private String mContent;
 
     public Dialog setContext(Context context) {
         this.mContext = context;
@@ -40,18 +42,39 @@ public class Dialog extends DialogFragment {
         show(fragmentManager, "DIALOG");
     }
 
+    public void show(FragmentManager fragmentManager, String dialogTitle, String dialogContent) {
+        this.mTitle = dialogTitle;
+        this.mContent = dialogContent;
+        show(fragmentManager, "DIALOG");
+    }
+
     @Override
     public android.app.Dialog onCreateDialog(Bundle savedInstance) {
-        return new AlertDialog.Builder(mContext)
-                .setTitle(mDialogTitle)
-                .setMessage(mDialogContent)
-                .setPositiveButton(android.R.string.ok, mOnClickListener == null ? new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d(LOG_TAG, "onClick() for positive dialog action called");
-                    }
-                } : mOnClickListener)
-                .create();
+        AlertDialog alertDialog;
+        if(mTitle == null && mContent == null) {
+            alertDialog = new AlertDialog.Builder(mContext)
+                    .setTitle(mDialogTitle)
+                    .setMessage(mDialogContent)
+                    .setPositiveButton(android.R.string.ok, mOnClickListener == null ? new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Log.d(LOG_TAG, "onClick() for positive dialog action called");
+                        }
+                    } : mOnClickListener)
+                    .create();
+        } else {
+            alertDialog = new AlertDialog.Builder(mContext)
+                    .setTitle(mTitle)
+                    .setMessage(mContent)
+                    .setPositiveButton(android.R.string.ok, mOnClickListener == null ? new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Log.d(LOG_TAG, "onClick() for positive dialog action called");
+                        }
+                    } : mOnClickListener)
+                    .create();
+        }
+        return alertDialog;
     }
 
 }
