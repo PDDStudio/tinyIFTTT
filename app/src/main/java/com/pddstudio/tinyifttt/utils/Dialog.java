@@ -61,6 +61,7 @@ public class Dialog extends DialogFragment {
                             Log.d(LOG_TAG, "onClick() for positive dialog action called");
                         }
                     } : mOnClickListener)
+                    .setCancelable(false)
                     .create();
         } else {
             alertDialog = new AlertDialog.Builder(mContext)
@@ -72,6 +73,7 @@ public class Dialog extends DialogFragment {
                             Log.d(LOG_TAG, "onClick() for positive dialog action called");
                         }
                     } : mOnClickListener)
+                    .setCancelable(false)
                     .create();
         }
         return alertDialog;
