@@ -40,5 +40,11 @@
     "actionTitle" : "Android TV",
     "actionDescription" : "Power on/off my AndroidTV.",
     "actionExec" : [ "sh", "/opt/mods/tv_power.sh" ]   
+    },
+    {
+    "actionIdentifier" : 8,
+    "actionTitle" : "Ping Google.com",
+    "actionDescription" : "Ping Google's Website to make sure the internet connection is available.",
+    "actionExec" : [ "ping", "google.com" ]   
     }
 ]
