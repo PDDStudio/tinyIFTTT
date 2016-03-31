@@ -102,7 +102,7 @@ Once your tinyIFTTT Server is running you should see something similar to this i
 [03-30-2016|18:26:57][TinyIFTTT::/D] Starting tinyIFTTT Server...
 ```
 
-This means your good to go and can connect to your tinyIFTTT Server via the Android-App.
+This means you're good to go and can connect to your tinyIFTTT Server via the Android-App.
 
 Enter the IP-Address of the machine you're running the tinyIFTTT Server Module on and the Port you specified when launching the tinyIFTTT Server.
 
