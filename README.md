@@ -42,7 +42,7 @@ This section gets more into detail how you can get the tinyIFTTT Server Module a
 
 There are two ways to get started with the tinyIFTTT Server Module. 
 
-Either download the [prepackaged binary]() or build it yourself using gradle:
+Either download the [prepackaged binary from the release page](https://github.com/PDDStudio/tinyIFTTT/releases) or build it yourself using gradle:
 
 ```
 ./gradlew tinyIFTTTserver
@@ -65,7 +65,7 @@ java -jar tinyIFTTT-server-full-1.0.jar --help
 ####Getting the Android App up and running
 
 There are to ways to get the Android App up and running. 
-Either download the [prepackaged apk]() or import the project into AndroidStudio and build it yourself.
+Either download the [prepackaged apk from the release page](https://github.com/PDDStudio/tinyIFTTT/releases) or import the project into AndroidStudio and build it yourself.
 
 Simply install the application and you're ready to go.
 
