@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements ServerConnection.
         layoutManager = new LinearLayoutManager(this);
         fastAdapter = new FastItemAdapter<>();
         fastAdapter.withOnClickListener(this);
+        fastAdapter.withSelectable(false);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(fastAdapter);
