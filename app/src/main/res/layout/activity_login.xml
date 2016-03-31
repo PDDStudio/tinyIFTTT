@@ -17,6 +17,11 @@
         android:orientation="vertical"
         tools:context="com.pddstudio.tinyifttt.LoginActivity">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo" />
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/ipInputLayout"
             android:layout_width="match_parent"
