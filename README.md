@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PDDStudio/tinyIFTTT/master/readme_logo.png">
+</p>
+
 #tinyIFTTT - If This Then That
 A tiny, lightweight, easy to use and customize IFTTT (if this, then that) server and (Android) client.
 
