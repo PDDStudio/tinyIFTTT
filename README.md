@@ -187,6 +187,9 @@ In case you want to see a live demonstration, feel free to have a look at the [Y
 - In case you've a question feel free to hit me up via E-Mail (patrick.pddstudio@googlemail.com) 
 - or [Google+](http://plus.google.com/+PatrickJung42)
 
+###Special Thanks & Contributors
+- A Special Thanks goes to [Manuel Labrador Vianthi (MLV)](https://plus.google.com/+ManuelLabradorVianthi/) for creating the tinyIFTTT Logo for the Android-App 
+
 ###License
     Copyright 2016 Patrick J
 
