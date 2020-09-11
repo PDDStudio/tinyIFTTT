@@ -2,18 +2,18 @@
   <img src="https://raw.githubusercontent.com/PDDStudio/tinyIFTTT/master/readme_logo.png">
 </p>
 
-#tinyIFTTT - If This Then That
+# tinyIFTTT - If This Then That
 A tiny, lightweight, easy to use and customize IFTTT (if this, then that) server and (Android) client.
 
 The ideal thing for hackers and home-automation freaks.
 
-###What is IFTTT?
+### What is IFTTT?
 
 IFTTT is a mechanism that allows users to create chains of simple conditional statements, called "recipes", which are triggered based on changes to other user interactions. IFTTT is an abbreviation of "If This Then That".
 
 *Original Source: [Wikipedia](https://en.wikipedia.org/wiki/IFTTT) | Some changes where made in the definition above*
 
-###What does tinyIFTTT do?
+### What does tinyIFTTT do?
 
 Basically, tinyIFTTT can do **everything** that you could do on your personal computer or server, like for example upgrading your server's linux packages, shutting down or rebooting your server, triggering self-written scripts on your RaspberryPi and much more.
 
@@ -21,7 +21,7 @@ tinyIFTTT aims to let you easily configure different kind of receipes/actions wh
 
 This repository contains the source and pre-packaged binaries for **both** components, the **Android-App** and the **tinyIFTTT Server Module**
 
-###Why does tinyIFTTT exist?
+### Why does tinyIFTTT exist?
 
 One day, I was hacking on my RaspberryPi and wrote some scripts to automatically make backups on my NAS. 
 
@@ -33,16 +33,16 @@ All I wanted to do was to press a button and the action should be executed.
 
  This was the beginning of tinyIFTTT. 
 
-###What's in the package
+### What's in the package
 tinyIFTTT comes with a plug-and-play server component that you can immediately run on your machine.
 
 All you need is a machine with a JVM installed, nothing else is required to get everything up and running (well, except of your receipes of course).
 
-###Getting Started with tinyIFTTT
+### Getting Started with tinyIFTTT
 
 This section gets more into detail how you can get the tinyIFTTT Server Module and the tinyIFTTT Android-App up and running.
 
-####Getting the Server Module up and running
+#### Getting the Server Module up and running
 
 There are two ways to get started with the tinyIFTTT Server Module. 
 
@@ -66,14 +66,14 @@ If you need help:
 java -jar tinyIFTTT-server-full-1.0.jar --help
 ```
 
-####Getting the Android App up and running
+#### Getting the Android App up and running
 
 There are to ways to get the Android App up and running. 
 Either download the [prepackaged apk from the release page](https://github.com/PDDStudio/tinyIFTTT/releases) or import the project into AndroidStudio and build it yourself.
 
 Simply install the application and you're ready to go.
 
-###Configuring tinyIFTTT
+### Configuring tinyIFTTT
 To configure tinyIFTTT all you have to do is writing a simple file which contains your receipes using `json`-format.
 For a life preview check out [the sample json config file here](https://github.com/PDDStudio/tinyIFTTT/blob/master/tinyifttt-server/tiny-sample.json).
 The config file holds an array of your receipes. This can contain as much receipes as you want to configure.
@@ -95,7 +95,7 @@ Explanation:
 - **actionDescription**: Here you can specify the description you want to be displayed for this receipe on your smartphone.
 - **actionExec**: An array of String which represents the commands you would execute in your terminal / the process you want to be started with (optional) parameters.
 
-###Usage
+### Usage
 
 As soon as you have both modules up and running you can start connecting to your server using the tinyIFTTT Android-App.
 
@@ -118,7 +118,7 @@ Clicking on the specified receipe will execute the desired action.
 
 More samples and demonstrations can be found in the [Samples & Demonstration](https://github.com/PDDStudio/tinyIFTTT#samples--demonstration) Section. 
 
-###Samples & Demonstration
+### Samples & Demonstration
 
 Assuming we have the following config file filled with the receipes we want to use:
 
@@ -183,14 +183,13 @@ This is how it would look like inside the tinyIFTTT Android-App
 In case you want to see a live demonstration, feel free to have a look at the [YouTube Video](https://www.youtube.com/watch?v=HpCYYrplYZ8) I recorded.
 
 
-###About & Contact
-- In case you've a question feel free to hit me up via E-Mail (patrick.pddstudio@googlemail.com) 
-- or [Google+](http://plus.google.com/+PatrickJung42)
+### About & Contact
+- In case you've a question feel free to hit me up via E-Mail (patrick.pddstudio/gmail) 
 
-###Special Thanks & Contributors
+### Special Thanks & Contributors
 - A Special Thanks goes to [Manuel Labrador Vianthi (MLV)](https://plus.google.com/+ManuelLabradorVianthi/) for creating the tinyIFTTT Logo for the Android-App 
 
-###License
+### License
     Copyright 2016 Patrick J
 
     Licensed under the Apache License, Version 2.0 (the "License");
